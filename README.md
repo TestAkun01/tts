@@ -1,3 +1,11 @@
+---
+title: "Hatsune Miku TTS + RVC"
+python_version: "3.10"
+sdk: "gradio"
+app_file: app.py
+pinned: false
+---
+
 # RVC Text-to-Speech WebUI
 
 This is a text-to-speech Gradio webui for [RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) models, using [edge-tts](https://github.com/rany2/edge-tts).
