@@ -4,11 +4,11 @@ import logging
 import os
 import time
 import traceback
-import soundfile as sf
 import edge_tts
 import gradio as gr
 import librosa
 import torch
+import soundfile as sf
 from fairseq import checkpoint_utils
 
 from config import Config
