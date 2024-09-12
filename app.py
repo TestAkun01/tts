@@ -197,8 +197,6 @@ def tts(
         )
         if tgt_sr != resample_sr >= 16000:
             tgt_sr = resample_sr
-        if not isinstance(audio_opt, tgt_sr):
-            raise ValueError("audio_opt must be a numpy array")
 
         librosa.output.write_wav("audio_final.wav", audio_opt, sr=tgt_sr)
         info = f"Success. Time: edge-tts: {edge_time}s, npy: {times[0]}s, f0: {times[1]}s, infer: {times[2]}s"
