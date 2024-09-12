@@ -166,13 +166,6 @@ def tts(
         audio, sr = librosa.load(edge_output_filename, sr=16000, mono=True)
         duration = len(audio) / sr
         print(f"Audio duration: {duration}s")
-        if limitation and duration >= 20:
-            print("Error: Audio too long")
-            return (
-                f"Audio should be less than 20 seconds in this huggingface space, but got {duration}s.",
-                edge_output_filename,
-                None,
-            )
 
         f0_up_key = int(f0_up_key)
 
