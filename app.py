@@ -4,7 +4,7 @@ import logging
 import os
 import time
 import traceback
-
+import soundfile as sf
 import edge_tts
 import gradio as gr
 import librosa
@@ -198,7 +198,7 @@ def tts(
         if tgt_sr != resample_sr >= 16000:
             tgt_sr = resample_sr
 
-        librosa.output.write_wav("audio_final.wav", audio_opt, sr=tgt_sr)
+        sf.write("audio_final.wav", audio_opt, tgt_sr)
         info = f"Success. Time: edge-tts: {edge_time}s, npy: {times[0]}s, f0: {times[1]}s, infer: {times[2]}s"
         print(info)
         return (
